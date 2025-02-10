@@ -1,6 +1,22 @@
-if instance_exists(objPlayer){
-	playerX = instance_nearest(x,y,objPlayer).x;
-	playerY = instance_nearest(x,y,objPlayer).y;
+switch(allyChar) {
+	case character.ladybug:
+		spriteIdle = sprLadybugIdle;
+	break;
+	case character.snail:
+		spriteIdle = sprSnailIdle;
+	break;
+	case character.bee:
+		spriteIdle = sprBeeIdle;
+	break;
+	case character.ant:
+		spriteIdle = sprAntIdle;
+	break;
+}
+sprite_index = spriteIdle;
+
+if instance_exists(target){
+	playerX = target.x;
+	playerY = target.y;
 }
 
 if (global.pause) {
@@ -8,28 +24,32 @@ if (global.pause) {
 	exit;
 }
 
+moveDir = (direction mod 180)*2-1;
+if ( !locked ) {
+	rangeX = lengthdir_x(-16,target.moveDir);
+	rangeY = lengthdir_y(-16,target.moveDir);
+}
 
-var 
-	_x = playerX  +lengthdir_x(0,_player_angle+angleMod*1.5),
-	_y = playerY-8  +lengthdir_y(0,_player_angle+angleMod*1.5),
-	_player_pos  = mp_grid_path(global.mp_grid, _path, x, y-8, _x, _y, 1);
+if ( point_distance(x,y,nextX,nextY) < 16) {
+	moveDelay = moveTimer;
+} else {
+	moveDelay --;
+}
+if ( moveDelay < 1 ||! path_index && point_distance(x,y,playerX,playerY) > 16 ) {
+	var playerAngle = point_direction(x,y,playerX,playerY);
+	path_delete(path);
+	path = path_add();
 	
-	if ( _player_pos ) { 
-		path_start(_path,spd,path_action_stop,false);
+	var 
+	_x = ((playerX	+rangeX) div TS) * TS+8,
+	_y = ((playerY-8+rangeY) div TS) * TS+8;
+
+	var _grid = mp_grid_path(global.mp_grid,path,x,y,_x,_y,1);
+	
+	if _grid {
+		nextX = _x;
+		nextY = _y;
+		moveDelay = moveTimer;
+		path_start(path, spd, 0, 0);
 	}
-	
-	
-switch(allyChar) {
-	case character.ladybug:
-		sprite_index = sprLadybugIdle;
-	break;
-	case character.snail:
-		sprite_index = sprSnailIdle;
-	break;
-	case character.bee:
-		sprite_index = sprBeeIdle;
-	break;
-	case character.ant:
-		sprite_index = sprAntIdle;
-	break;
 }

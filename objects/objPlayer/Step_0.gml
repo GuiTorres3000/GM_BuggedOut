@@ -62,12 +62,12 @@ switch(playerStates){
 	break;
 }
 
-
 if (!global.pause){
 	// Aplicar velocidade
 	xspd = lengthdir_x(spd * moveBoth, moveDir);
 	yspd = lengthdir_y(spd * moveBoth, moveDir);
 }
+
 #endregion
 
 #region Change Player

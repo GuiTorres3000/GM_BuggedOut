@@ -65,6 +65,7 @@
     {"id":{"name":"sprPlayer","path":"sprites/sprPlayer/sprPlayer.yy",},},
     {"id":{"name":"sprSnailIdle","path":"sprites/sprSnailIdle/sprSnailIdle.yy",},},
     {"id":{"name":"sprWall","path":"sprites/sprWall/sprWall.yy",},},
+    {"id":{"name":"sprX","path":"sprites/sprX/sprX.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

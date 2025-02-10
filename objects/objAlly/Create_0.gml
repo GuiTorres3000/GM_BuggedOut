@@ -1,17 +1,25 @@
-//speed
-spd  = 0.05;
+randomize();
+spd = 1.1;
+path = path_add();
+moveDelay = 60;
+moveTimer = 10;
+
 xspd = 0;
 yspd = 0;
 
-//player position
+spriteIdle = 0;
+target  = objPlayer;
 playerX = 0;
 playerY = 0;
 
-//path
-moveTimer = 0;
-_player_angle = irandom(360);
-moveTimerMax = irandom(60);
-_path = path_add();
-angleMod = irandom_range(85,95)*choose(1,-1);
+nextX = 0;
+nextY = 0;
+
+sinTimer = 0;
+
+moveDir = 0;
+locked = 0;
+rangeX = lengthdir_x(16,moveDir);
+rangeY = lengthdir_x(16,moveDir);
 
 allyChar = 0;

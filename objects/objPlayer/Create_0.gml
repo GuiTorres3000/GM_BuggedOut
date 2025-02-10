@@ -64,12 +64,15 @@ ally_ladybug = id;
 
 ally_snail = instance_create_layer(x + 50, y, "Instances", objAlly); 
 ally_snail.allyChar = character.snail;
+ally_snail.target = ally_ladybug;
 
 ally_bee = instance_create_layer(x - 50, y, "Instances", objAlly); 
-ally_bee.allyChar = character.bee
+ally_bee.allyChar = character.bee;
+ally_bee.target = ally_snail;
 
 ally_ant = instance_create_layer(x, y -50, "Instances", objAlly); 
-ally_ant.allyChar = character.ant
+ally_ant.allyChar = character.ant;
+ally_ant.target = ally_bee;
 
 #endregion
 

@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"objAlly",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"objDoor",
+  "eventList":[],
   "managed":true,
-  "name":"objAlly",
+  "name":"objDoor",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
     "path":"folders/Objetos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objWall",
+    "path":"objects/objWall/objWall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBeeIdle",
-    "path":"sprites/sprBeeIdle/sprBeeIdle.yy",
+    "name":"sprDoor",
+    "path":"sprites/sprDoor/sprDoor.yy",
   },
   "spriteMaskId":null,
   "visible":true,

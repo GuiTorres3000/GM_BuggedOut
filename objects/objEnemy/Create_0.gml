@@ -1,18 +1,22 @@
-//speed
-spd  = 0.05;
+randomize();
+spd = 1;
+path = path_add();
+moveDelay = 60;
+moveTimer = 60+irandom(30); 
+
+range = 32;
 xspd = 0;
 yspd = 0;
 
-//player position
 playerX = 0;
 playerY = 0;
 
-//path
-moveTimer = 0;
-_player_angle = irandom(360);
-moveTimerMax = irandom(60);
-_path = path_add();
-angleMod = irandom_range(85,95)*choose(1,-1);
+nextX = 0;
+nextY = 0;
+
+sinTimer = 0;
+
+angleMod = 135*choose(1,-1)*random_range(0.8,1.2);
 
 
 // Life

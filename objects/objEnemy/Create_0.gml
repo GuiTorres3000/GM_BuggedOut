@@ -22,3 +22,11 @@ angleMod = 135*choose(1,-1)*random_range(0.8,1.2);
 // Life
 maxhp = irandom_range(2, 5);
 hp = maxhp;
+
+enum enemy{
+	idle,
+	walk,
+	attack,
+	hit
+}
+enemyState = enemy.idle;

@@ -1,2 +1,4 @@
 draw_self();
-draw_text(x, y+6, playerChar);
+
+draw_sprite(sprPlayer, 0, x, y);
+draw_text(x, y+6, attackTimer);

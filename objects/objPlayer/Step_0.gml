@@ -4,6 +4,8 @@
 	upKey = keyboard_check(ord("W"));
 	downKey = keyboard_check(ord("S"));
 	changeKey = keyboard_check_released(ord("X"));
+	
+	attackKey = mouse_check_button(mb_left)
 
 
 	move = (rightKey || leftKey || upKey || downKey);
@@ -26,6 +28,11 @@ switch(playerStates){
 		
 		// State Walk
 		if(move) playerStates = state.walk;
+		
+		// State Attack
+		if (attackTimer > 0) attackTimer--;
+		if(attackTimer <= 0 && attackKey) playerStates = state.attack;
+
 		#endregion
 	break;
 	
@@ -41,6 +48,16 @@ switch(playerStates){
 		// State Idle
 		if(!move) playerStates = state.idle;
 		
+		// State Attack
+		if (attackTimer > 0) attackTimer--;
+		if(attackTimer <= 0 && attackKey) playerStates = state.attack;
+		
+		#endregion
+	break;
+	
+	case state.attack:
+		#region Attack
+			scrAttack();
 		#endregion
 	break;
 }
@@ -84,7 +101,7 @@ if (changeKey){
 		break;
 		case character.ant:
 			spriteIdle = sprLadybugIdle;
-			spriteWalk = sprLadybugIdle;
+			spriteWalk = sprLadybugWalk;
 			spriteWalkBack = sprLadybugIdle;
 			playerChar = character.ladybug;
 			target_ally = ally_ladybug;
@@ -118,11 +135,13 @@ if (changeKey){
 
 #endregion
 
-#region 
-if (moveBoth != 0){
-	if((spriteDir && leftKey) || (!spriteDir && rightKey)) sprite_index = spriteWalkBack;
-	else sprite_index = spriteWalk;
-} else{
-	sprite_index = spriteIdle;	
+#region Animation
+if (playerStates != state.attack){
+	if (moveBoth != 0){
+		if((spriteDir && leftKey) || (!spriteDir && rightKey)) sprite_index = spriteWalkBack;
+		else sprite_index = spriteWalk;
+	} else{
+		sprite_index = spriteIdle;	
+	}
 }
 #endregion

@@ -76,7 +76,7 @@ if (changeKey){
 	
 	var old_player_char = playerChar; // Armazena o personagem atual para trocar depois
     var target_ally; // Variável para armazenar o aliado alvo
-	
+
 	switch(playerChar) {
 		case character.ladybug:
 			spriteIdle = sprSnailIdle;
@@ -84,7 +84,7 @@ if (changeKey){
 			spriteWalkBack = sprSnailIdle;
 			playerChar = character.snail;
 			target_ally = ally_snail;
-	    break;
+		break;
 		case character.snail:
 			spriteIdle = sprBeeIdle;
 			spriteWalk = sprBeeIdle;
@@ -105,8 +105,8 @@ if (changeKey){
 			spriteWalkBack = sprLadybugIdle;
 			playerChar = character.ladybug;
 			target_ally = ally_ladybug;
-	    break;
-    }
+		break;
+		}
 	
 	// Trocar de posição com o aliado correspondente
     var temp_x = x;
@@ -145,3 +145,5 @@ if (playerStates != state.attack){
 	}
 }
 #endregion
+
+show_debug_message(playerChar)

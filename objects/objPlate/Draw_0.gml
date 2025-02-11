@@ -1,10 +1,7 @@
 draw_self();
 if place_meeting(x,y,objPlayer){
 	draw_sprite(sprX,0,x,y-32)
-	if keyboard_check_pressed(ord("Z")){
-		hud = 1; global.pause = 1;
-}}
-
+}
 if ( hud ){
 	for(var i = 0; i < 4; i++){
 		var _scale = 1;

@@ -1,9 +1,7 @@
-if place_meeting(x,y,objAlly){
-	mode = 1;
+if ( mode ) {
 	instance_deactivate_object(door);
 	image_index = 1;
 } else {
-	mode = 0;
 	instance_activate_object(door);
 	image_index = 0;
 }
@@ -13,11 +11,19 @@ if ( hud ){
 	if pos > 3 pos = 0;
 	if pos < 0 pos = 3;
 	
-	if keyboard_check_pressed(ord("X")){
-		hudBugs[pos].target = self;
-		hudBugs[pos].rangeX = 8;
-		hudBugs[pos].rangeY = 8;
+	if keyboard_check_pressed(ord("Z")){
+		with(hudBugs[pos]){
+			x = other.x+8;
+			y = other.y+8;
+			locked = 1;
+			show_message("locked")
+		}
 		global.pause = false;
+		mode = 1;
 		hud = 0;
+	}
+} else if place_meeting(x,y,objPlayer) {
+	if keyboard_check_pressed(ord("Z")){
+		hud = 1; global.pause = 1;
 	}
 }

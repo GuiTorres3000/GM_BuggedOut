@@ -9,7 +9,7 @@ function scrEnemyMelee(){
 	xspd = lerp(xspd,0,.1);
 	yspd = lerp(yspd,0,.1);
 	
-	if ( xspd < .1 && yspd < .1 ) { 
+	if ( xspd < .2 && yspd < .2 ) { 
 	if (sprite_index != spriteAttack){
 		sprite_index = spriteAttack	
 		image_index = 0; 
@@ -27,6 +27,7 @@ function scrEnemyMelee(){
 				ds_list_add(hitByAttack, hitID);
 				with(hitID){
 					hp--;
+					scrScreenshake(4,16);
 				}
 			}
 		}

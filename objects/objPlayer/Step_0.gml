@@ -5,12 +5,12 @@
 	downKey = keyboard_check(ord("S"));
 	changeKey = keyboard_check_released(ord("X"));
 	
-	attackKey = mouse_check_button(mb_left)
-
+	attackKey = mouse_check_button(mb_left);
+	spriteDir = lengthdir_x(1,point_direction(x,0,mouse_x,0));
 
 	move = (rightKey || leftKey || upKey || downKey);
 #endregion 
-depth = -y;
+
 #region Movement
 
 if global.pause {
@@ -145,5 +145,3 @@ if (playerStates != state.attack){
 	}
 }
 #endregion
-
-show_debug_message(playerChar)

@@ -1,4 +1,5 @@
 global.pause = 0;
+global.instCamera = objCam;
 #macro TS 16
 #macro tagDepth "depthMain"
 

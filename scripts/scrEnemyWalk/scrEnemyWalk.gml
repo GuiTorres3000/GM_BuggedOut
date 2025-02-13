@@ -1,4 +1,6 @@
 function scrEnemyWalk(){
+	spriteDir = lengthdir_x(1,point_direction(x,0,playerX,0));
+	
 	if ( point_distance(x,y,playerX,playerY) < 32 ) {
 		moveDelay = moveTimer;
 	} else {

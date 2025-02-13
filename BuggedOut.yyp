@@ -41,6 +41,7 @@
   "name":"BuggedOut",
   "resources":[
     {"id":{"name":"objAlly","path":"objects/objAlly/objAlly.yy",},},
+    {"id":{"name":"objCam","path":"objects/objCam/objCam.yy",},},
     {"id":{"name":"objControl","path":"objects/objControl/objControl.yy",},},
     {"id":{"name":"objDoor","path":"objects/objDoor/objDoor.yy",},},
     {"id":{"name":"objEnemy","path":"objects/objEnemy/objEnemy.yy",},},
@@ -52,6 +53,7 @@
     {"id":{"name":"scrAnimationEnd","path":"scripts/scrAnimationEnd/scrAnimationEnd.yy",},},
     {"id":{"name":"scrAttack","path":"scripts/scrAttack/scrAttack.yy",},},
     {"id":{"name":"scrEnemyAtk","path":"scripts/scrEnemyAtk/scrEnemyAtk.yy",},},
+    {"id":{"name":"scrEnemyHit","path":"scripts/scrEnemyHit/scrEnemyHit.yy",},},
     {"id":{"name":"scrEnemyIdle","path":"scripts/scrEnemyIdle/scrEnemyIdle.yy",},},
     {"id":{"name":"scrEnemyMelee","path":"scripts/scrEnemyMelee/scrEnemyMelee.yy",},},
     {"id":{"name":"scrEnemyRange","path":"scripts/scrEnemyRange/scrEnemyRange.yy",},},

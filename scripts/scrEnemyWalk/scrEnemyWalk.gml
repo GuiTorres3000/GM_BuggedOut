@@ -31,9 +31,4 @@ function scrEnemyWalk(){
 		enemyState = enemy.atk;
 		attackTimer = attackCooldown;
 	}
-		
-	if collision_line(x,y,playerX,playerY,objWall,0,0){
-		path_end();
-		enemyState = enemy.idle;
-	}
 }

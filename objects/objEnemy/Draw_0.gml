@@ -1,2 +1,2 @@
 draw_self();
-draw_text(x, y-16, hp);
+draw_text(x, y-16, enemyState);

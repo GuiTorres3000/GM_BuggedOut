@@ -8,9 +8,12 @@ if (global.pause) {
 	exit;
 }
 
+attackTimer	--;
+
 switch(enemyState){
 	case enemy.idle: scrEnemyIdle(); break
 	case enemy.walk: scrEnemyWalk(); break
+	case enemy.atk : atk(); break
 }
 
 if (hp < 1 ) instance_destroy();

@@ -1,11 +1,12 @@
 function scrEnemyWalk(){
+	playerAngle = point_direction(x,y-8,playerX,playerY-8);
+	
 	if ( point_distance(x,y,playerX,playerY) < 32 ) {
 		moveDelay = moveTimer;
 	} else {
 		moveDelay --;
 	}
 	if ( moveDelay < 1 ||! path_index) {
-		var playerAngle = point_direction(x,y,playerX,playerY);
 		path_delete(path);
 		path = path_add();
 	
@@ -24,6 +25,11 @@ function scrEnemyWalk(){
 			moveDelay = moveTimer;
 			path_start(path, spd, 0, 0);
 		}
+	}
+		
+	if ( point_distance(x,y-8,playerX,playerY-8) < range && attackTimer < 0 ){
+		enemyState = enemy.atk;
+		attackTimer = attackCooldown;
 	}
 		
 	if collision_line(x,y,playerX,playerY,objWall,0,0){

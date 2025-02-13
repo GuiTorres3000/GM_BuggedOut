@@ -21,7 +21,7 @@ function scrAttack(){
 					xspd = lengthdir_x(3,playerAngle-180);
 					yspd = lengthdir_y(3,playerAngle-180);
 					enemyState = enemy.hit;
-					scrScreenshake(10,2);
+					scrScreenshake(4,16);
 				}
 			}
 		}

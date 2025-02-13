@@ -3,6 +3,7 @@ if place_meeting(x,y,objPlayer){
 		hp--;
 	}
 	instance_destroy();
+	scrScreenshake(4,16);
 }
 
 speed = lerp(speed,0,.05);

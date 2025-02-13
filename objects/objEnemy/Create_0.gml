@@ -17,7 +17,7 @@ sinTimer = 0;
 playerAngle = 0;
 angleMod = 135*choose(1,-1)*random_range(0.8,1.2);
 
-_name = 2;
+_name = 0;
 
 switch(_name){
 	default:

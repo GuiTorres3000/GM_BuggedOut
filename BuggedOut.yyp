@@ -41,6 +41,7 @@
   "name":"BuggedOut",
   "resources":[
     {"id":{"name":"objAlly","path":"objects/objAlly/objAlly.yy",},},
+    {"id":{"name":"objCam","path":"objects/objCam/objCam.yy",},},
     {"id":{"name":"objControl","path":"objects/objControl/objControl.yy",},},
     {"id":{"name":"objDoor","path":"objects/objDoor/objDoor.yy",},},
     {"id":{"name":"objEnemy","path":"objects/objEnemy/objEnemy.yy",},},

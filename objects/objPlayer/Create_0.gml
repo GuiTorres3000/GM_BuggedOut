@@ -60,19 +60,27 @@ enum character{
 	ant
 }
 
+posX = array_create(94, x); 
+posY = array_create(94, y); 
+
+for (var m = 0; m < 94; m++) {
+    posX[m] = x;
+    posY[m] = y;
+}
+
 ally_ladybug = id;
 
 ally_snail = instance_create_layer(x + 50, y, "Instances", objAlly); 
 ally_snail.allyChar = character.snail;
-ally_snail.target = ally_ladybug;
+ally_snail.record = 16;
 
 ally_bee = instance_create_layer(x - 50, y, "Instances", objAlly); 
 ally_bee.allyChar = character.bee;
-ally_bee.target = ally_snail;
+ally_bee.record = 32;
 
 ally_ant = instance_create_layer(x, y -50, "Instances", objAlly); 
 ally_ant.allyChar = character.ant;
-ally_ant.target = ally_bee;
+ally_ant.record = 48;
 
 #endregion
 

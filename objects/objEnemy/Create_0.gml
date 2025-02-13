@@ -1,5 +1,4 @@
 randomize();
-spd = 1;
 path = path_add();
 moveDelay = 60;
 moveTimer = 60+irandom(30); 
@@ -18,18 +17,26 @@ sinTimer = 0;
 playerAngle = 0;
 angleMod = 135*choose(1,-1)*random_range(0.8,1.2);
 
-_name = 1;
+_name = 2;
 
 switch(_name){
 	default:
 		atk = scrEnemyMelee;
 		range = 48;
 		attackCooldown  = 60;
+		spd = 1;
 		break
 	case 1:
 		range = 80;
 		atk = scrEnemyRange;
 		attackCooldown  = 30;
+		spd = 1;
+		break
+	case 2:
+		range = 0;
+		atk = scrEnemyMelee;
+		attackCooldown  = 600;
+		spd = 0;
 		break
 }
 

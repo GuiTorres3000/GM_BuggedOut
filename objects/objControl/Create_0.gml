@@ -1,4 +1,5 @@
 global.pause = 0;
+global.instCamera = view_camera[0];
 #macro TS 16
 #macro tagDepth "depthMain"
 

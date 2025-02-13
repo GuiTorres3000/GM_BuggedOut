@@ -15,7 +15,8 @@ attackTimer	--;
 switch(enemyState){
 	case enemy.idle: scrEnemyIdle(); break
 	case enemy.walk: scrEnemyWalk(); break
-	case enemy.atk : scrEnemyAtk(); break
+	case enemy.atk : scrEnemyAtk();  break
+	case enemy.hit : scrEnemyHit();  break
 }
 
 if (hp < 1 ) instance_destroy();

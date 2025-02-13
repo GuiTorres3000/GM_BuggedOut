@@ -1,7 +1,4 @@
 function scrEnemyMelee(){
-	path_end();
-	
-	if ( attackTimer >= -5 ) exit;
 	if ( ! atkMode ){
 	atkMode = 1
 	xspd = lengthdir_x(4,playerAngle);

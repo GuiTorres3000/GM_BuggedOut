@@ -1,6 +1,4 @@
 function scrEnemyWalk(){
-	playerAngle = point_direction(x,y-8,playerX,playerY-8);
-	
 	if ( point_distance(x,y,playerX,playerY) < 32 ) {
 		moveDelay = moveTimer;
 	} else {

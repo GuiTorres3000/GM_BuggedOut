@@ -51,6 +51,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scrAnimationEnd","path":"scripts/scrAnimationEnd/scrAnimationEnd.yy",},},
     {"id":{"name":"scrAttack","path":"scripts/scrAttack/scrAttack.yy",},},
+    {"id":{"name":"scrEnemyAtk","path":"scripts/scrEnemyAtk/scrEnemyAtk.yy",},},
     {"id":{"name":"scrEnemyIdle","path":"scripts/scrEnemyIdle/scrEnemyIdle.yy",},},
     {"id":{"name":"scrEnemyMelee","path":"scripts/scrEnemyMelee/scrEnemyMelee.yy",},},
     {"id":{"name":"scrEnemyRange","path":"scripts/scrEnemyRange/scrEnemyRange.yy",},},

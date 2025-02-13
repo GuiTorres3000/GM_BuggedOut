@@ -8,9 +8,14 @@ if (global.pause) {
 	exit;
 }
 
+playerAngle = point_direction(x,y-8,playerX,playerY-8);
+
+attackTimer	--;
+
 switch(enemyState){
 	case enemy.idle: scrEnemyIdle(); break
 	case enemy.walk: scrEnemyWalk(); break
+	case enemy.atk : scrEnemyAtk(); break
 }
 
 if (hp < 1 ) instance_destroy();

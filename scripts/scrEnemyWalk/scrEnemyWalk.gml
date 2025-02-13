@@ -5,7 +5,6 @@ function scrEnemyWalk(){
 		moveDelay --;
 	}
 	if ( moveDelay < 1 ||! path_index) {
-		var playerAngle = point_direction(x,y,playerX,playerY);
 		path_delete(path);
 		path = path_add();
 	
@@ -26,8 +25,8 @@ function scrEnemyWalk(){
 		}
 	}
 		
-	if collision_line(x,y,playerX,playerY,objWall,0,0){
-		path_end();
-		enemyState = enemy.idle;
+	if ( point_distance(x,y-8,playerX,playerY-8) < range && attackTimer < 0 ){
+		enemyState = enemy.atk;
+		attackTimer = attackCooldown;
 	}
 }

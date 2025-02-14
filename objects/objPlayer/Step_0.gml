@@ -31,7 +31,10 @@ switch(playerStates){
 		
 		// State Attack
 		if (attackTimer > 0) attackTimer--;
-		if(attackTimer <= 0 && attackKey) playerStates = state.attack;
+		if(attackTimer <= 0 && attackKey && !moveBoth){
+			moveDir = point_distance(x, y, mouse_x, mouse_y);
+			playerStates = state.attack;
+		}
 
 		#endregion
 	break;
@@ -50,7 +53,7 @@ switch(playerStates){
 		
 		// State Attack
 		if (attackTimer > 0) attackTimer--;
-		if(attackTimer <= 0 && attackKey) playerStates = state.attack;
+		if(attackTimer <= 0 && attackKey && moveBoth) playerStates = state.attack;
 		
 		#endregion
 	break;
@@ -58,6 +61,12 @@ switch(playerStates){
 	case state.attack:
 		#region Attack
 			scrAttack();
+		#endregion
+	break;
+	
+	case state.attack_combo:
+		#region Attack Combo
+			scrAttackCombo();
 		#endregion
 	break;
 }
@@ -136,7 +145,7 @@ if (changeKey){
 #endregion
 
 #region Animation
-if (playerStates != state.attack){
+if (playerStates != state.attack && playerStates != state.attack_combo){
 	if (moveBoth != 0){
 		if((spriteDir && leftKey) || (!spriteDir && rightKey)) sprite_index = spriteWalkBack;
 		else sprite_index = spriteWalk;

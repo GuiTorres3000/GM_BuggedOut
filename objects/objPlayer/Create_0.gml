@@ -14,13 +14,13 @@
 #endregion
 
 #region Controlls
-
 	// Controles
 	rightKey = 0;
 	leftKey = 0;
 	upKey = 0;
 	downKey = 0;
-
+	
+	attackKey = 0;
 	changeKey = 0;
 
 #endregion
@@ -40,7 +40,7 @@ enum state{
 }
 
 // Attack
-attackCooldown = 4;
+attackCooldown = 10;
 attackTimer = attackCooldown;
 
 hitByAttack = ds_list_create();
@@ -72,15 +72,15 @@ ally_ladybug = id;
 
 ally_snail = instance_create_layer(x + 50, y, "Instances", objAlly); 
 ally_snail.allyChar = character.snail;
-ally_snail.record = 16;
+ally_snail.record = 32;
 
 ally_bee = instance_create_layer(x - 50, y, "Instances", objAlly); 
 ally_bee.allyChar = character.bee;
-ally_bee.record = 32;
+ally_bee.record = 48;
 
 ally_ant = instance_create_layer(x, y -50, "Instances", objAlly); 
 ally_ant.allyChar = character.ant;
-ally_ant.record = 48;
+ally_ant.record = 64;
 
 #endregion
 
@@ -90,7 +90,16 @@ ally_ant.record = 48;
 spriteIdle = sprLadybugIdle;
 spriteWalk = sprLadybugWalk;
 spriteWalkBack = sprLadybugWalk;
-spriteAttack = sprLadybugAttack;
+
+// Sprites de Attack
+attacking = false;
+spriteAttack0 = [sprLadybugAttack0, sprLadybugAttack0B];
+spriteAttack0HB = sprLadybugAttack0HB;
+spriteAttack90 = [sprLadybugAttack90, sprLadybugAttack90B];
+spriteAttack90HB = sprLadybugAttack90HB;
+spriteAttack270 = [sprLadybugAttack270, sprLadybugAttack270B];
+spriteAttack270HB = sprLadybugAttack270HB;
+
 spriteDash = sprLadybugIdle;
 
 sprite = sprLadybugIdle;

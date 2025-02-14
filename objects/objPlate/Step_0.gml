@@ -16,7 +16,6 @@ if ( hud ){
 			x = other.x+8;
 			y = other.y+8;
 			locked = 1;
-			show_message("locked")
 		}
 		global.pause = false;
 		mode = 1;

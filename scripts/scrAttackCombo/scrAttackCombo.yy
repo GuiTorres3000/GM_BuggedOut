@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrAttackCombo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrAttackCombo",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

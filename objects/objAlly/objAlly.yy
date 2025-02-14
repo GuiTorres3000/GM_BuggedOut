@@ -11,8 +11,8 @@
   "name":"objAlly",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Characters",
+    "path":"folders/Objetos/Characters.yy",
   },
   "parentObjectId":null,
   "persistent":false,

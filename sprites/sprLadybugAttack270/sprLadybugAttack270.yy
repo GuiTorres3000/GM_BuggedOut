@@ -51,8 +51,8 @@
   },
   "origin":9,
   "parent":{
-    "name":"Attacks",
-    "path":"folders/Sprites/Characters/Ladybug/Attacks.yy",
+    "name":"Attack270",
+    "path":"folders/Sprites/Characters/Ladybug/Attacks/Attack270.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

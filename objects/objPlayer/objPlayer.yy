@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprLadybugIdle",
-    "path":"sprites/sprLadybugIdle/sprLadybugIdle.yy",
+    "name":"sprLadybugPreparation",
+    "path":"sprites/sprLadybugPreparation/sprLadybugPreparation.yy",
   },
   "spriteMaskId":{
     "name":"sprPlayer",

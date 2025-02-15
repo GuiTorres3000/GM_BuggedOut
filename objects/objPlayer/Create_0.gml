@@ -93,16 +93,19 @@ spriteWalkBack = sprLadybugWalk;
 
 // Sprites de Attack
 attacking = false;
-spriteAttack0 = [sprLadybugAttack0, sprLadybugAttack0B];
+spriteAttack0 = [sprLadybugAttack0, sprLadybugAttack0C];
 spriteAttack0HB = sprLadybugAttack0HB;
+spriteAttack45 = [sprLadybugAttack0, sprLadybugAttack0C];
+spriteAttack45HB = sprLadybugAttack0HB;
 spriteAttack90 = [sprLadybugAttack90, sprLadybugAttack90B];
 spriteAttack90HB = sprLadybugAttack90HB;
 spriteAttack270 = [sprLadybugAttack270, sprLadybugAttack270B];
 spriteAttack270HB = sprLadybugAttack270HB;
+spriteAttack315 = [sprLadybugAttack270, sprLadybugAttack270B];
+spriteAttack315HB = sprLadybugAttack270HB;
 
-spriteDash = sprLadybugIdle;
+spriteDash = sprLadybugPreparation;
 
-sprite = sprLadybugIdle;
 spriteDir = 1; // Direção do Sprite
 
 #endregion

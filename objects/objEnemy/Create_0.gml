@@ -25,18 +25,51 @@ switch(_name){
 		range = 48;
 		attackCooldown  = 60;
 		spd = 1;
+		
+		//sprites
+		spriteIdle = sprLadybugIdle;
+		spriteWalk = sprLadybugWalk;
+
+		//atk sprites
+		spritePreparation	= sprLadybugPreparation;
+		spriteAttack0		= sprLadybugAttack0;
+		spriteAttack0HB		= sprLadybugAttack0HB;
+		spriteAttack90		= sprLadybugAttack90;
+		spriteAttack90HB	= sprLadybugAttack90HB;
+		spriteAttack270		= sprLadybugAttack270;
+		spriteAttack270HB	= sprLadybugAttack270HB;
 		break
 	case 1:
 		range = 80;
 		atk = scrEnemyRange;
 		attackCooldown  = 30;
 		spd = 1;
+		
+		//sprites
+		spriteIdle = sprLadybugIdle;
+		spriteWalk = sprLadybugWalk;
+
+		//atk sprites
+		spritePreparation	= sprLadybugPreparation;
+		spriteAttack0		= sprLadybugAttack0;
+		spriteAttack90		= sprLadybugAttack90;
+		spriteAttack270		= sprLadybugAttack270;
 		break
 	case 2:
 		range = 0;
 		atk = scrEnemyMelee;
 		attackCooldown  = 600;
 		spd = 0;
+		
+		//sprites
+		spriteIdle = sprLadybugIdle;
+		spriteWalk = sprLadybugWalk;
+
+		//atk sprites
+		spritePreparation	= sprLadybugPreparation;
+		spriteAttack0		= sprLadybugAttack0;
+		spriteAttack90		= sprLadybugAttack90;
+		spriteAttack270		= sprLadybugAttack270;
 		break
 }
 
@@ -51,14 +84,6 @@ atkMode = 0;
 xspd = 0;
 yspd = 0;
 
-//sprites
-spriteIdle = sprLadybugIdle;
-spriteWalk = sprLadybugWalk;
-spriteWalkBack = sprLadybugWalk;
-spriteAttack = sprLadybugAttack;
-spriteDash = sprLadybugIdle;
-
-sprite = sprLadybugIdle;
 spriteDir = 1; // Direção do Sprite
 
 enum enemy{

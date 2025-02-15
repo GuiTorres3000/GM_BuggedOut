@@ -11,4 +11,4 @@ if ( x != xprevious || y != yprevious ){
 	sprite_index = spriteIdle;
 }
 
-image_xscale = -spriteDir;
+image_xscale = spriteDir;

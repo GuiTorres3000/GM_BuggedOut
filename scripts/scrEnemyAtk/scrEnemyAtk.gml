@@ -1,4 +1,6 @@
 function scrEnemyAtk(){
-	if ( attackTimer > -5 ) exit;
-	atk();
+	path_end();
+	if ( attackTimer < -10 ){
+		atk();
+	}
 }

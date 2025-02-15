@@ -7,10 +7,8 @@ if (global.pause) {
 	path_end();
 	exit;
 }
-
-playerAngle = point_direction(x,y-8,playerX,playerY-8);
-
 attackTimer	--;
+playerAngle = point_direction(x,y-8,playerX,playerY-8);
 
 switch(enemyState){
 	case enemy.idle: scrEnemyIdle(); break

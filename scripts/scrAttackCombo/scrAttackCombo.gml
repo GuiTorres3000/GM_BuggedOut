@@ -47,7 +47,7 @@ function scrAttackCombo(){
 	
 	spd = lerp(spd, 0, 0.1);
 	if(scrAnimationEnd()){
-		sprite_index = sprLadybugIdle;
+		sprite_index = sprLadybugPreparation;
 		mask_index = sprPlayer;
 		playerStates = state.walk;
 		attackTimer = attackCooldown;

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scrScreenshake",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"BuggedOut",
+    "path":"BuggedOut.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

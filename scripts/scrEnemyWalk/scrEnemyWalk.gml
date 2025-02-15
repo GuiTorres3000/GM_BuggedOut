@@ -1,5 +1,6 @@
 function scrEnemyWalk(){
 	spriteDir = lengthdir_x(1,point_direction(x,0,playerX,0));
+	sprite_index = spriteWalk;
 	
 	if ( point_distance(x,y,playerX,playerY) < 32 ) {
 		moveDelay = moveTimer;
@@ -28,6 +29,8 @@ function scrEnemyWalk(){
 	}
 		
 	if ( point_distance(x,y-8,playerX,playerY-8) < range && attackTimer < 0 ){
+		sprite_index = spritePreparation;
+		image_index  = 0;
 		enemyState = enemy.atk;
 		attackTimer = attackCooldown;
 	}

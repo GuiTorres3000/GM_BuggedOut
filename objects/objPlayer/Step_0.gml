@@ -109,9 +109,9 @@ if (changeKey){
 			target_ally = ally_ant;
 		break;
 		case character.ant:
-			spriteIdle = sprLadybugIdle;
+			spriteIdle = sprLadybugPreparation;
 			spriteWalk = sprLadybugWalk;
-			spriteWalkBack = sprLadybugIdle;
+			spriteWalkBack = sprLadybugPreparation;
 			playerChar = character.ladybug;
 			target_ally = ally_ladybug;
 		break;

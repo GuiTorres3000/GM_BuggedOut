@@ -58,7 +58,7 @@ function scrAttack(){
 	}
 	
 	if(scrAnimationEnd()){
-		sprite_index = sprLadybugIdle;
+		sprite_index = sprLadybugPreparation;
 		mask_index = sprPlayer;
 		attackTimer = attackCooldown;
 		attacking = false;

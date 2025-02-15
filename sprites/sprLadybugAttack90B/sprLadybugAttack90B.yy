@@ -83,7 +83,7 @@
     },
     "name":"sprLadybugAttack90B",
     "playback":1,
-    "playbackSpeed":20.0,
+    "playbackSpeed":26.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

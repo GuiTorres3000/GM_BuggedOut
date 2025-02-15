@@ -14,7 +14,7 @@ void main()
     // Centralizando o efeito na tela
     vec2 Coord = v_vTexcoord + vec2(
         cos((v_vPosition.y / Size.y + Time) * 6.2831) * Wave.y, 
-        0
+        sin((v_vPosition.x / Size.x + Time) * 6.2831) * Wave.x
     ) / Size;
 
     // Aplica a cor e textura normalmente

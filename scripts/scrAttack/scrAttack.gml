@@ -3,26 +3,29 @@ function scrAttack(){
 	
 	if (!attacking){
 		var mouseDir = point_direction(x, y, mouse_x, mouse_y)
-		if((mouseDir > 0 && mouseDir < 45) || (mouseDir > 315 && mouseDir < 360)){
-			sprite_index = spriteAttack0[0];
-			image_index = 0;
-			mask_index = spriteAttack0HB;
-			moveDir = 0;
-		}else if(mouseDir > 45 && mouseDir < 135){
-			sprite_index = spriteAttack90[0];
-			image_index = 0;
-			mask_index = spriteAttack90HB;
-			moveDir = 90;
-		}else if(mouseDir > 135 && mouseDir < 225){
-			sprite_index = spriteAttack0[0];
-			image_index = 0;
-			mask_index = spriteAttack0HB;
-			moveDir = 180;
-		}else if(mouseDir > 225 && mouseDir < 315){
-			sprite_index = spriteAttack270[0];
-			image_index = 0;
-			mask_index = spriteAttack270HB;
-			moveDir = 270;
+		moveDir = mouseDir;
+		switch(floor((mouseDir+45)/90)){
+			case 0:
+			case 4:
+				sprite_index = spriteAttack0[0];
+				image_index = 0;
+				mask_index = spriteAttack0HB;
+			break;
+			case 1:
+				sprite_index = spriteAttack90[0];
+				image_index = 0;
+				mask_index = spriteAttack90HB;
+			break;
+			case 2:
+				sprite_index = spriteAttack0[0];
+				image_index = 0;
+				mask_index = spriteAttack0HB;
+			break;
+			case 3:
+				sprite_index = spriteAttack270[0];
+				image_index = 0;
+				mask_index = spriteAttack270HB;
+			break;
 		}
 		moveBoth = 1;
 		ds_list_clear(hitByAttack);
@@ -65,5 +68,5 @@ function scrAttack(){
 		playerStates = state.walk;
 	}
 	
-	return [moveDir];
+	return;
 }

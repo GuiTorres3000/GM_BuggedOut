@@ -91,6 +91,15 @@ if (changeKey){
 			spriteIdle = sprSnailIdle;
 			spriteWalk = sprSnailIdle;
 			spriteWalkBack = sprSnailIdle;
+			
+			//Attack
+			spriteAttack0 = [sprSnailAttack0, sprSnailAttack0B];
+			spriteAttack0HB = sprSnailAttack0HB;
+			spriteAttack90 = [sprSnailAttack90, sprSnailAttack90B];
+			spriteAttack90HB = sprSnailAttack90HB;
+			spriteAttack270 = [sprSnailAttack270, sprSnailAttack270B];
+			spriteAttack270HB = sprSnailAttack270HB;
+			
 			playerChar = character.snail;
 			target_ally = ally_snail;
 		break;
@@ -113,6 +122,11 @@ if (changeKey){
 			spriteWalk = sprLadybugWalk;
 			spriteWalkBack = sprLadybugPreparation;
 			playerChar = character.ladybug;
+			
+			spriteAttack0 = sprLadybugAttack0;
+			spriteAttack90 = sprLadybugAttack90;
+			spriteAttack270 = sprLadybugAttack270;
+			
 			target_ally = ally_ladybug;
 		break;
 		}

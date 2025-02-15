@@ -2,19 +2,19 @@
 function scrAttackCombo(){
 	
 	if (!attacking){
-		if(moveDir == 0){
+		if((moveDir > 315 && moveDir < 360) || (moveDir > 0 && moveDir < 45)){
 			sprite_index = spriteAttack0[1];
 			image_index = 0;
 			mask_index = spriteAttack0HB;
-		}else if(moveDir == 90){
+		}else if(moveDir > 45 && moveDir < 135){
 			sprite_index = spriteAttack90[1];
 			image_index = 0;
 			mask_index = spriteAttack90HB;
-		}else if(moveDir == 180){
+		}else if(moveDir > 135 && moveDir < 225){
 			sprite_index = spriteAttack0[1];
 			image_index = 0;
 			mask_index = spriteAttack0HB;
-		}else if(moveDir == 270){
+		}else if(moveDir > 225 && moveDir < 315){
 			sprite_index = spriteAttack270[1];
 			image_index = 0;
 			mask_index = spriteAttack270HB;

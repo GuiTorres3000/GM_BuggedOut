@@ -1,7 +1,10 @@
-global.pause = 0;
-global.instCamera = objCam;
+global.pause = -1;
+global.instCamera	= objCam;
+global.music		= 1;
 #macro TS 16
 #macro tagDepth "depthMain"
+music = 0;
+pause = -1;
 
 asset_add_tags(objPlayer,tagDepth,asset_object);
 asset_add_tags(objAlly,tagDepth,asset_object);
@@ -55,4 +58,61 @@ depthMain = function(){
 			event_perform(ev_draw, 0);
 		}
 	}
+}
+	
+upKey = keyboard_check_pressed(vk_up);
+downKey = keyboard_check_pressed(vk_down);
+enterKey = keyboard_check_pressed(vk_enter);
+pauseKey = keyboard_check_pressed(vk_space);
+
+width  = 96;
+height = 104;
+
+//position
+xPos = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])/2-width/2;
+yPos = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])/2-height/2;
+
+btnBorder	= 8; 
+opSpace		= 16;
+opAngle		= 0;
+opAlpha		= 1;
+
+pos = 0;
+
+spaceWave = 0;
+spaceshipX = 208;
+spaceshipY = 16;
+earthX = 144;
+earthY = 112;
+
+//Main menu
+option[0, 0] = "Resume";
+option[0, 1] = "Settings";
+option[0, 2] = "Menu";
+
+//Death
+option[1, 0] = "Try again";
+option[1, 1] = "Settings";
+option[1, 2] = "Menu";
+
+//Pause
+option[2, 0] = "Controls";
+option[2, 1] = "Back";
+
+option[3, 0] = "Back"
+
+control = false;
+
+for(var i = 0; i < 3; i ++){
+	optionScale[i] = 1;
+}
+
+
+iniMenulevel = 0;
+menuLevel = 0;
+opLength = 0;
+
+_windowSetSize = function(_width,_height){
+	window_set_size(_width, _height);
+	surface_resize(application_surface, _width, _height);
 }

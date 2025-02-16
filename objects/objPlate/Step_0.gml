@@ -17,7 +17,7 @@ if ( hud ){
 			y = other.y+8;
 			locked = 1;
 		}
-		global.pause = false;
+		global.pause = -1;
 		mode = 1;
 		hud = 0;
 	}

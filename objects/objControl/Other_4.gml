@@ -7,6 +7,7 @@ global.mp_grid = mp_grid_create(-32,-32,_w+32,_h+32,TS,TS);
 mp_grid_add_instances(global.mp_grid,objWall,false);
 
 depthGrid  = ds_grid_create(2,0);
+depthArray = tag_get_asset_ids(tagDepth,asset_object);
 
 for( var i = 0; i < array_length(depthArray); i ++ ){
 	var _obj = depthArray[i];

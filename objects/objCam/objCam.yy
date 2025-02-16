@@ -11,8 +11,8 @@
   "name":"objCam",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Control",
+    "path":"folders/Objetos/Control.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -1,14 +1,16 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"tileBushes",
-  "autoTileSets":[],
+  "%Name":"tileGrass",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":false,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[11,19,18,6,14,10,9,5,13,8,12,7,16,15,17,0,],},
+  ],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"tileBushes",
-  "out_columns":5,
+  "name":"tileGrass",
+  "out_columns":4,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -18,8 +20,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"sprTileBushes",
-    "path":"sprites/sprTileBushes/sprTileBushes.yy",
+    "name":"sprTileGrass",
+    "path":"sprites/sprTileGrass/sprTileGrass.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
@@ -34,5 +36,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":30,
+  "tile_count":20,
 }

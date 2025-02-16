@@ -1,5 +1,6 @@
 #region Velocity
 
+
 	// Velocidade
 	maxspd = 1;		// Velocidade Máxima
 
@@ -93,9 +94,9 @@ spriteWalkBack = sprLadybugWalk;
 
 // Sprites de Attack
 attacking = false;
-spriteAttack0 = [sprLadybugAttack0, sprLadybugAttack0C];
+spriteAttack0 = [sprLadybugAttack0, sprLadybugAttack0B];
 spriteAttack0HB = sprLadybugAttack0HB;
-spriteAttack45 = [sprLadybugAttack0, sprLadybugAttack0C];
+spriteAttack45 = [sprLadybugAttack0, sprLadybugAttack0B];
 spriteAttack45HB = sprLadybugAttack0HB;
 spriteAttack90 = [sprLadybugAttack90, sprLadybugAttack90B];
 spriteAttack90HB = sprLadybugAttack90HB;
